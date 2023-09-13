@@ -1,0 +1,158 @@
+\documentclass[12pt]{report}
+
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{ucs}
+\usepackage[table,xcdraw]{xcolor}
+\definecolor{mColor1}{rgb}{0.9,0.9,0.9}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand\sectionmark[1]{\markright{\thesection\ #1}}
+
+\fancyhead[LO, RE]{\leftmark}
+\fancyhead[LE, RO]{\rightmark}
+
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\usepackage{mathptmx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath,amssymb,amstext,amsthm,mathtools}
+\usepackage{url}
+\usepackage{caption}
+%\usepackage[belowskip=-5pt,aboveskip=0pt]{caption}
+\usepackage{subcaption}
+
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{pdfpages}
+\usepackage{rotating}
+\usepackage{graphicx}
+\setlength\parindent{0pt}
+\usepackage{hyperref}
+\usepackage{acronym}
+\usepackage{textcmds}
+\usepackage{longtable}
+\usepackage[export]{adjustbox}
+\usepackage{upgreek}
+\usepackage{dsfont}
+\usepackage{tensor}
+\usepackage{amsbsy}
+\usepackage{multirow, hhline, colortbl}
+\usepackage[table]{xcolor}
+
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\SetMathAlphabet{\mathcal}{bold}{OMS}{cmsy}{b}{n}
+
+\usepackage{listings, lstautogobble}
+\usepackage{textcomp}
+\definecolor{yo}{rgb}{0.9,0.6,0}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.95,0.95,0.95}
+\definecolor{greylines}{rgb}{0.9529,0.9529,0.9529}
+
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=python,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=lines,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0.55,0,0},
+        alsoletter={/,*,[,]},%
+        otherkeywords={},
+        morekeywords=[2]{with, as},
+        morekeywords=[3]{},
+        emph={self},          % Custom highlighting
+		emphstyle=\color[rgb]{0.1,0.3,1},
+		emph={[2]f},          % Custom highlighting
+		emphstyle={[2]\color[rgb]{0.1,0.5,0.1}},
+		emph={[3]__init__},          % Custom highlighting
+		emphstyle={[3]\color[rgb]{0.1,0.3,1}},
+		emph={[4]open,str,print,KeyError},          % Custom highlighting
+		emphstyle={[4]\color[rgb]{0.2,0.6,0.8}},
+        commentstyle=\color[rgb]{0.3,0.3,0.3},
+        stringstyle=\color[rgb]{0.133,0.545,0.133},
+        	autogobble=true
+}
+\lstnewenvironment{ttlisting}{\lstset{basicstyle=\scriptsize}}{}
+
+\usepackage{color}
+\usepackage[section]{placeins}
+
+\newenvironment{simplechar}{%
+	\catcode`\$=12
+	\catcode`\&=12
+	\catcode`\#=12
+	\catcode`\^=12
+	\catcode`\_=12
+	\catcode`\~=12
+	\catcode`\%=12
+	\catcode`\"=12
+	\catcode`\'=12
+	}{}{}
+
+\newtheoremstyle{dotless}{}{}{\itshape}{}{\bfseries}{}{ }{}
+
+\theoremstyle{dotless}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exmp}[thm]{Example}
+\theoremstyle{definition}
+
+
+\begin{document}
+
+\begin{titlepage}
+	Warum bin ich nicht einfach Staubsaugervertreter geworden?
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Test}
+
+\section{Test}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
