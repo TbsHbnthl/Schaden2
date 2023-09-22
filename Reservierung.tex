@@ -378,6 +378,404 @@ Retrospektive Bewertung der Beitr\"age mit prospektiver Bildung von R"uckstellun
 	\item FP: gesch\"atzte, zuk\"unftige, undiskontierte Brutto-Pr\"amie f\"ur alle Vertr\"age des aktuellen Bestandes, die gem\"a{\ss} der Grenzen der Versicherungsvertr\"age zu ber\"ucksichtigen sind
  \end{itemize}
 
+\subsection{R\"uckversicherung unter SII}
+
+\begin{itemize}
+	\item BE Brutto - Einforderbare Betr\"age aus RV = BE Netto
+	\item Einforderbare Betr\"age getrennt nach Pr\"amien- und Schadenr\"uckstellungen (und anerkannte Renten)
+	\item Segmentierung in homogene Risikogruppen
+	\item Unterschiedliche Formen der RV (proportional, nicht-proportional, Stop-Loss, fakultativ)
+	\item Wiederauff\"ullungspr\"amien ber\"ucksichtigen
+	\item M\"oglichen Ausfall der RV einkalkulieren
+	\item Einforderbare Betr\"age aus RV beim Erstversicherer = versicherungstechnische R\"uckstellungen beim RV
+\end{itemize}
+
+\subsection{Risikomarge unter SII}
+\begin{itemize}
+	\item stellt sicher, dass der Wert der vers.techn. R\"uckstellungen dem Betrag entspricht, den VU fordern fordern w\"urden, um die Versicherungsverpflichtungen \"ubernehmen und erf\"ullen zu können
+	\item  $RM = CoC \cdot \sum_{t\geq 0} \frac{SCR_{RU}(t)}{(1+r_{t+1})^{t+1}}$
+	\item $CoC$ = Kapitalkostensatz (6\%)
+	\item $SCR_{RU}(t)$: Solvenzkapitalanforderung des Referenzunternehmens \textit{RU} nacht \textit{t} Jahren
+	\item $r_{t+1}$: risikofreier Zins zur Laufzeit $t+1$
+\end{itemize}
+
+\section{Grundlagen der aktuariellen Schadenreservebewertung}
+
+\subsection{Grundlagen und Bezeichnungen}
+
+\subsubsection{Abwicklungsdreieck bzw. -rechteck}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Abwicklungseck.png}
+\end{figure}
+
+\begin{itemize}
+	\item $C_{i,k}$ kumulativer Stand des AJs \textit{it} nach \textit{k} Abwicklungsjahren
+	\item $1 \leq i \leq n$ und $1 \leq k \leq u$
+	\item $n<u$: Nachlauf/Tail
+	\item Zeilen k\"onnen sein: Anfalljahre, Zeichnungsjahre, Meldejahre
+	\item Abwicklungsjahre
+	\begin{itemize}
+		\item Zedentensichtweise: RV definiert das Abwicklungsjahr, in dem das abgerechnete Quartal des Zedenten liegt
+		\item Finanzsichtweise: Basis f\"ur Abwicklungsjahr ist das Jahr, in dem die Abrechnung beim RV verbucht wurde
+	\end{itemize}
+	\item Segmentierung konsistent zur Tarifierung halten
+	\item $S_{i,k} = C_{i,k} - C_{i,k-1}$
+	\item $R_i = C_{i,u} - C_{i,n-i+1} = S_{i,n-i+2} + ... + S_{i,u}$
+	\item $R = R_1 + ... + R_n$
+	\item IBNR = IBNYR + IBNER (incurred but not yet reported + incurred but not enough reserved)
+	\item Kernproblem: Bestimmung einer Sch\"ätzung $\hat{R}_i$ f\"ur $R_i$ bzw. $E(R_i)$
+	\item Anfalljahre unabhängig voneinander (problematisch, da Inflation z.B. kein Anfalljahreseffekt ist)
+	\item Bereinigung von Gro{\ss}sch\"aden und Inflation u.U. notwendig
+	\item Manche Projektionsverfahren verwenden ein Volumen- bzw. Exposurema{\ss} $v_i$ f\"ur das AJ \textit{i}
+\end{itemize}
+
+\subsection{Segmentierung}
+
+\begin{itemize}
+	\item Einteilung eines Bestandes in hinreichend gro{\ss}e, aber m\"oglichst homogene Risikogruppen bzw. Einteilung von Sch\"aden in Gruppen anhand von Schadenmerkmalen
+	\item Muss zu Anforderungen der externen Rechtslegung passen:
+	\begin{itemize}
+		\item HGB: Unterteilung in Unfall, Kranken, KFZ-Haftpflicht, KFZ-Sonstige, Transport und Luftfahrt, Feuer und Sach, Haftpflicht, Kredit und Kaution, Rechtsschutz, Beistandsleistungen, Sonstige
+		\item IFRS: Keine Anforderungen
+		\item SII: Homogene Risikogruppen, mindestens nach SII LoBs
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Sich \"andernde Rahmenbedingungen - Inflation}
+
+\subsubsection{interne Rahmenbedingungen}
+\begin{itemize}
+	\item Schadenregulierung
+	\item Praxis der Einzelfallreservierung
+	\item Bestandszusammensetzung
+	\item Tarifbedingungen
+	\item Beitragsanpassungen
+	\item Datenverarbeitung
+	\item [$\rightarrow$] ber\"ucksichtigen und Datenhistorie anpassen
+\end{itemize}
+
+\subsubsection{externe Rahnenbedingungen}
+
+\begin{itemize}
+	\item Gesetzlicher Rahmen, Recht, Steuern
+	\item Gesellschaftliche, soziale, demographische, politische Rahmenbedingungen
+	\item Medizinischer Fortschritt, steigende Lebenserwartung
+	\item Technologischer Fortschritt
+	\item \"Okologische Entwicklungen
+	\item \"okonomische Rahmenbedingunen (z.B. Inflation)
+	\item [$\rightarrow$] individuelle Ber\"ucksichtigung, z.B. Inflationsanpassung $S_{i,k}^{I}=\frac{I_n}{I_{i+k-1}} \cdot S_{i,k}$
+	\item [$\rightarrow$] zuk\"unftige Zahlungsstr\"ome $\widehat{S_{i,k}} = \frac{I_{i+k-1}}{I_n} \cdot \widehat{S_{i,k}^I}$ (Inflationierung der Zukunft)
+	\item Praxis: Daten nicht bereinigt, Inflation implizit ber\"ucksichtigt und bei Bedarf Superimposed Inflation on top
+\end{itemize}
+
+\subsection{Raten\"anderungen, Pr\"amienzyklen und Reservezyklen}
+
+\begin{itemize}
+	\item J\"ahrliche Anpassung der Pr\"amie m\"oglich
+	\item Raten\"anderung: h\"ohere oder niedrigere Pr\"amien f\"ur gleiche Risiken
+	\item Praxis: Messung schwierig, da oft Tarife auch leicht modifiziert werden. Ratenverbesserungen, wenn die Pr\"amie steigt und das Risiko gleich bleibt
+	\item Pr\"amienzyklus: einige Jahre Ratenverbesserungen, dann Ratenverschlechterungen (harter und weicher Markt)
+	\begin{itemize}
+		\item nicht ausk\"ommliche Pr\"amien f\"uhren zu Preiserh\"ohungen
+		\item ausk\"ommliche zu Gewinnen und erlauben damit Ratenverschlechterungen 
+		\item solche Zyklen auch bei Reserven zu beobachten (Reserveerh\"ohung oder -aufl\"osung
+	\end{itemize}
+\end{itemize}
+
+\subsection{Die Behandlung von Ausrei{\ss}ern, Gro{\ss}- und Kumulsch\"aden}
+
+\begin{itemize}
+	\item Ausrei{\ss}er: 
+	\begin{itemize}	
+		\item deutlich anderes Abwicklungsverhalten
+		\item Anteil gro{\ss} genug, um relevant zu sein
+		\item z.B. Gro{\ss}- oder Kumulsch\"aden
+	\end{itemize}
+	\item Gro{\ss}schadengrenze muss festgelegt werden
+	\begin{itemize}
+		\item Quantil der Schadenh\"ohenverteilung
+		\item Prozentsatz des erwarteten Endschadenstands des Anfalljahres
+		\item Fest gew\"ahlter Betrag als Grenze
+	\end{itemize}
+	\item Separation der Gro{\ss}- und Kumulsch\"aden
+		\begin{itemize}
+			\item Separation aus Abwicklungsdaten
+			\item Problem: vorhandene Sch\"aden, die sp\"ater gro{\ss} werden, werden inkonsistent behandelt
+			\item Kappung an Gro{\ss}schadengrenze
+			\item Problem: Erzeugt k\"unstliches Abwicklungsverhalten
+			\item Gl\"attung des Abwicklungsdreiecks
+			\item Problem: Was sind objektive Kriterien zur Umverteilung?
+		\end{itemize}
+	\item Gro{\ss}sch\"aden werden separat in Gro{\ss}schadendreick oder \"uber Einzelbewertung betrachtet
+	\item R\"uckstellungen f\"ur zuk\"unftige Gro{\ss}sch\"aden
+\end{itemize}
+
+\subsection{Abwicklungsmuster und Methoden der Reservebewertung}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Abwicklungsmuster1.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Abwicklungsmuster2.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Abwicklungsmuster3.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Abwicklungsmuster4.png}
+\end{figure}
+
+\subsection{Behandlung Nachlauf und Gl\"attung}
+
+\begin{itemize}
+	\item meist bei lang-abwickelnden Sparten, wie z.B. Haftpflicht
+	\item Abwicklungsmuster unterstellen: $f_k = \frac{E(C_{i,k})}{E(C_{i,k-1})}$ f\"ur $k=n+1,...,u$
+	\item Zahlung: monoton fallende Faktoren, die sich der 1 n\"ahern
+	\item Aufw\"ande: Faktoren zwischen 0 und 1 m\"oglich
+	\item Sch\"atzung der Faktoren mit Abwicklungsfunktion $\phi:\mathbb{N} \rightarrow \mathbb{R}_+:$
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Tailfunktion.png}
+\end{figure}
+
+\subsubsection{Sch\"atzung der Tailfaktoren}
+\begin{itemize}
+	\item [1.] Auswahl einer parametrischen Klasse von Abwicklungsfunktionen $\phi:\mathbb{N} \rightarrow \mathbb{R}_+$
+	\item [2.] Auswahl der Abwicklungsjahre $ K \subset \{1,...,n\}$, die verwendet werden sollen
+	\item [3.] Sch\"atzung der Parameter von $\phi$ durch Minimieren des gewichteten quadratischen Approximationsfehlers $\sum_{k \in K} w_k (\phi(k) - \hat{f_k})^2$
+	\item [4.] $\hat{f_k} := \hat{\phi}(k)$
+\end{itemize}
+
+\section{Grundlagen stochastischer Modelle}
+
+\subsection{Sch\"atz-, Zufalls-, und Prognosefehler}
+\begin{itemize}
+	\item \"Uberpr\"ufung, ob Modellannahmen zu Daten passen
+	\item Identifikation nicht angebrachter Methoden
+	\item Sinnvoll begr\"undbare Kombination verschiedener Datentypen (z.B. Zahlungen und Aufw\"ande
+	\item Berechnung von Zufalls-, Sch\"atz- und Prognosefehlern zur Einsch\"atzung der Unsicherheit
+	\item Aggregation der Prognosen und Prognosefehler über mehrere Segmente unter Ber\"ucksichtigung von Korrelationen
+	\item Simulation der Wahrscheinlichkeitsverteilung
+	\item Unvermeidbare Fehler: Modellfehler/\"Anderungsrisiko (au{\ss}erhalb des Modells, Sch\"atzfehler und Zufallsfehler (zusammen Prognosefehler)
+	\item \item Wegen der Unsicherheiten in Reserveberichten immer ein Disclaimer
+\end{itemize}
+
+\textbf{--------------------------------------
+Folie 97 - 129 einbauen?
+--------------------------------------}
+
+\subsection{\"Uberpr\"ufung der Modellannahmen und Modellauswahl}
+
+\subsubsection{Graphische Darstellung}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/GrafischeDarstellung.png}
+\caption{Abwicklung der Anfalljahre, links als Schadenquoten, rechts logarithmusch skalierte Schadenbetr\"age}
+\end{figure}
+
+\textbf{Hier gut zu erkennen:}
+\begin{itemize}
+	\item L\"ange und Form der Abwicklung
+	\item Notwendigkeit eines Tails
+	\item Volumen\"anderung
+	\item Ratenniveau und -\"anderungen
+	\item \"Anderung der Portfoliozusammensetzung
+	\item Annahme (CL2): Tr\"agt man $C_{i,k}$ f\"ur $i = 1,...,n-k+1$ gegen $C_{i,k-1}$ auf, so sollten die Punkte zu\"allig um die Ursprungsgerade mit Steigung $f_k$ streuen
+	\item Stellt man $S_{i,k}$ gegen $C_{i,k-1}$ dar, so gilt die Aussage analog mit Steigung $f_k - 1$
+	\item Bei ILR2: in der grafischen Darstellung von $S_{i,k}$ gegen $v_i$ f\"ur $i=1,...,n-k+1$ streuen die Punkte zu\"allig um die Ursprungsgerade mit Steigung $m_k$ (siehe Grafik)
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Streuung.png}
+\end{figure}
+
+\subsubsection{Residuenanalyse}
+
+\begin{itemize}
+	\item Residuen beschreiben Abweichungen vom Mittelwert in normierter Art
+	\item Idealfall: wei{\ss}es Rauschen
+	\item Sch\"atzungen: 
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Schaetzungen.png}
+\end{figure}
+
+\begin{itemize}
+	\item Summenformel f\"ur Residuenquadrate: $ \sum_{i=1}^{n-k+1} \widehat{Res}^{CL}(C_{i,k})^2 = n - k = \sum_{i=1}^{n-k+1} \widehat{Res}^{ILR}(S_{i,k})^2$
+	\item Auswirkungen der Summenformel f\"ur Residuenquadrate:
+	\begin{itemize}
+		\item Betrag der gesch\"atzten Residuen durch $\sqrt{n-k}$ begrenzt
+		\item Je h\"oher das Jahr, desto kleiner die maximal m\"oglichen Betr\"age
+		\item Sch\"atzung der Residuen in der rechten Spitze des Dreiecks beruht nur auf wenigen Daten, daher kaum Aussagekraft
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Graphische Residuenanalyse}
+\begin{itemize}
+	\item unterschiedliche Abwicklungsfaktoren der verschiedenen Abwicklungsjahre durch Residuen vergleichbar
+	\item Residuen gegen Abwicklungsjahr: Streuen nach Konstruktion um Null, idealerweise wei{\ss}es Rauschen
+	\item Residuen gegen Anfalljahr: \"anderungen des Abwicklungsverhaltens aufgrund Portfoliozusammensetzung oder Raten\"anderung (nur ILR)
+	\item Residuen gegen Kalenderjahr: Pl\"otzliche oder graduelle Kalenderjahreseffekte
+	\item Beispiele siehe Folien 137 - 140
+	\item Wichtig: Residuen des j\"ungsten Kalenderjahres f\"ur aktuelle Trends 
+\end{itemize}
+
+\subsubsection{Auswahl eines Modells}
+\begin{itemize}
+	\item Parallelenkriterium:
+	\begin{itemize}
+		\item ILR-Fall f\"ur ein festes Abwicklungsjahr k: $\frac{C_{i,k}}{v_i} - \frac{C_{i,k-1}}{v_i} = \frac{S_{i,k}}{v_i} \thickapprox m_k$, d.h. Stegungen der AJ ann\"ahern parallel
+		\item CL-Fall f\ur festes Abwicklungsjahr k: $ln(\frac{C_{i,k}}{v_i}) - ln(\frac{C_{i,k-1}}{v_i}) = ln(\frac{C_{i,k}}{C_i,k-1}}) \thickapprox ln(f_k)$, d.h. Steigung der AJ mit logarithmisch skalierter y-Achse ann\"ahernd parallel.
+	\end{itemize}
+	\item Backtesting-Kriterium
+	\begin{itemize}
+		\item \"Uberpr\"ufung, welches Modell in der beobachteten Vergangenheit eines Abwicklungsjahres $k$ mit $2 \leq k \leq n-1$ die genaueren Prognosen geliefert h\"atte
+		\item Berechne daf\"ur Differenzen $S_{i,k} - (\hat{f}_k - 1) \cdot C_{i,k-1}$ und $S_{i,k} - \hat{m}_k \cdot v_i$
+		\item Sieger: kleinerer Differenzbetrag
+		\item Dreieck entsprechend einf\"arben $\rightarrow$ gemustertes Bild
+		\item Kombination:  f\"ur verschiedene Abwicklungsjahre unterschiedliche Modelle w\"ahlen, nicht zu h\"aufig wechseln
+	\end{itemize}
+	\item Korrelationskriterium
+	\begin{itemize}
+		\item IRL: $Cov(\frac{C_{i,k-1}}{v_i},\frac{S_{i,k}}{v_i})=0$ und $Cov^{\mathcal{A}_{i,k-1}}(\frac{C_{i,k}}{C_{i,k-1}},\frac{C_{i,k+1}}{C_{i,k}}) <0$
+		\item CL: $Cov(\frac{C_{i,k-1}}{v_i},\frac{S_{i,k}}{v_i})=Var(C_{i,k-1}) \cdot \frac{f_k-1}{v_i^2}$ und $Cov^{\mathcal{A}_{i,k-1}}(\frac{C_{i,k}}{C_{i,k-1}},\frac{C_{i,k+1}}{C_{i,k}}) = 0$
+		\item Zugangsquoten und Schadenquoten unkorreliert (positiv korreliert) und sukzessive Abwicklungsfaktoren negativ korreliert (unkorreliert), so spricht dies f\"ur das ILR-Modell (CL-Modell)
+	\end{itemize}
+\end{itemize}
+
+\subsection{Aggregation der Reserven mehrerer Segmente}
+
+\begin{itemize}
+	\item Portfolio \"ublicherweise bestehend aus mehreren Segmenten
+	\item $D_{i,k}$ f\"ur $i=1,...,n$ und $k=1,...,u$ die kumulierten Schadenst\"ande eines weiteren Segments
+	\item $R_i^C$, $R_j^D$ die jeweiligen Reserven, $v_i^C$, $v_i^D$ die Volumina
+	\item Annahme: zwei Segmente der gleichen Gr"o{\ss}e
+\end{itemize}
+
+
+\subsubsection{Gesamtreserve}
+\begin{itemize}
+	\item nicht additiv: $\hat{R}_i^{C+D} \neq \hat{R}_i^C + \hat{R}_i^D$
+	\item in der Praxis gilt das irgendwie doch??? Keine Ahnung, Folie 151
+	\item Zur bestimmung der (bedingten) Varianzen von $R_i^C+R_i^D$ bzw. $\hat{R}_i^C + \hat{R}_i^D$ braucht man die Kovarianzen zwischen diesen Gr\"o{\ss}en
+	\item Analyse der Korrelationen mit Residuen
+\end{itemize}
+
+
+\subsubsection{Korrelationsmodell zur Aggregation von Reserven nach Braun 2004}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Braun1.png}
+\end{figure}
+
+\textbf{Bemerkungen:}
+\begin{itemize}
+	\item Abh\"angigkeit der Residuensch\"atzer ist eine Unsicherheitsquelle bei der Bestimmung des Korrelationsparameters
+	\item Durch Summenformel f\"ur Residuenquadrate: unsichere Residuen haben keinen gro{\ss}en Einfluss
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Braun2.png}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/Braun3.png}
+\end{figure}
+
+\subsubsection{Bemerkungen zum Korrelationsmodell}
+
+\textbf{Sch\"atzungen der Korrelationsparameter}
+\begin{itemize}
+	\item Sch\"atzungen der Korrelationsparameter
+	\begin{itemize}
+		\item Sch\"atzung eines Korrelationsparameters pro Abwicklungsjahr nicht sinnvoll
+		\item Stabilisierung durch Analyse auf der Ebene von Ausweisbranchen
+	\end{itemize}
+	\item Folgerungen f\"ur Korrelationsstruktur
+	\begin{itemize}
+		\item es gibt keinen Korrelationskoeffizienten zwischen den Reserven zweier Segmente, der durch die Segmente alleine bestimmt ist
+		\item Korrelation zwischen Reserven und Reservesch\"atzern h\"angt z.B. von der Verteilung der AJ ab
+		\item Verwendung eines externen Koeffizienten ist einfacher
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{Bornhuetter/Ferguson-Modell}
+
+\subsubsection{Das Verfahren}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/BF.png}
+\end{figure}
+
+\subsubsection{Eigenschaften B/F-Methode}
+\begin{itemize}
+	\item a-priori Endschadenstand $\hat{U}_i$ meist als Endschadenquote $\hat{q}_i$ \"uber $\hat{U}_i = \hat{q}_i \cdot v_i$ f\"ur $i = 1,...,n$ gegeben
+	\item initiale Schadenquote $\hat{q}_i$ f\"ur j\"ungere Anfalljahre meist aus Tarifierung und Pricing
+	\item F\"ur \"altere Jahre oft nicht vorhanden oder aus Vorjahr \"ubernommen
+	\item $\hat{C}_{i,u} - \hat{U}_i = C_{i,n-i+1} + \hat{R}_i - \hat{U}_i \cdot (\hat{p}_{n-i+1} + (1- \hat{p}_{n-i+})) = C_{i,n-i+1} - \hat{U}_i \cdot \hat{p}_{n-i+1}$ verschwindet genau dann, wenn aktueller Stand zur Erwartung passt
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/BF2.png}
+\end{figure}
+
+\begin{itemize}
+	\item Unabh\"angigkeit des aktuellen Schadenstandes von der gesch\"atzten B/F-Reserve ist fundamentale Eigenschaft des B/F-Verfahrens
+	\item B/F und ILR sehr \"ahnlich, Reserve kann \"ubereinstimmen 
+\end{itemize}
+
+
+
+\subsubsection{Modell Annahmen nach Mack}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Bilder/BF3.png}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
