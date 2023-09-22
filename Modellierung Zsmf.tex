@@ -133,7 +133,7 @@
 
 \subsubsection{Definition eines Unternehmensmodell}
 Bei einem internen Risikomodell handelt es sich um ein stochastisches Modell, das mittels stochastischer Verfahren messbare Aktiv- und Passivrisiken der betrachteten Gesellschaften abbildet. \\
-Dabei sollte es über die unternehmensindividuelle Modellierung der stochastischen Geschäftsgrößen die signifikanten finanziellen Auswirkungen konsistent quantifizieren und Abhängigkeitsstrukturen zwischen alle Risikogrößen berücksichtigen.\\
+Dabei sollte es über die unternehmensindividuelle Modellierung der stochastischen Geschäftsgrößen die signikanten finanziellen Auswirkungen konsistent quantifizieren und Abhängigkeitsstrukturen zwischen alle Risikogrößen berücksichtigen.\\
 Zielgrößen sind die Gesamtverteilung der Geschäftsergebnisse sowie die Berechnung des benötigten Risikokapitals in einer Marktwertsicht (Anfalljahressicht).
 
 \subsubsection{Standardformel}
@@ -152,7 +152,8 @@ Zielgrößen sind die Gesamtverteilung der Geschäftsergebnisse sowie die Berech
 
 \begin{itemize}
 \item Simulationsbasiert: Hohe Anzahl an Simulationen erforderlich
-\item separate komplette Wahrscheinlichkeitsverteilung per Risiko
+\item separate komplette Wahrscheinlichkeitsverteilung per Risiko (jedes Risiko wird durch eine stochastische Ergebnisgröße repräsentiert
+\item Segmentierung und Kalibrierung (Verteilungen, Volatilitätsparameter) erfolgt unternehmensindividuell, Aggregation unter Copula-Annahmenil
 \item Beliebige Risikomaße anwendbar - neben VaR auch Expected Shortfall
 \end{itemize}
 
@@ -169,7 +170,7 @@ Ausgangspunkt: Gegeben seien $n \in \mathbb{N}$ Simulationswerte $(^{(1)}X, ^{(2
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.8 \textwidth]{Bilder/DFA.png}
+	\includegraphics[width=\textwidth]{Bilder/DFA.png}
 \end{figure}
 
 
@@ -300,7 +301,7 @@ Trennung der Schadentypen: Basisschäden, Großschäden, Katastrophenschäden
 \subsubsection{Kalibrierungsprozess}
 \begin{itemize}
 \item Abwicklung der Schäaden (Ermittlung voraussichtlicher Endschadenstände)
-\item "as if"-Transformation der Schäden (wenn der Schaden im parametrisierenden Schadenjahr angefallen wäre)
+\item as if-Transformation der Schäden (wenn der Schaden im parametrisierenden Schadenjahr angefallen wäre)
 \begin{itemize}
 \item Anpassung an aktuelle Bestandsgröße
 \item Anpassung an momentanen Geldwert
@@ -426,31 +427,405 @@ Unterteilung in:
 
 \subsection{Implizite Modellierung gemäß mathematisch-statistischer Ansätze}
 
-Folie 46
+\subsubsection{Allgemeines Vorgehen}
+\begin{itemize}
+\item Anpassungen von Wahrscheinlichkeitsverteilungen an die (unternehmenseigenen)
+Schadendaten nach as-if Transformation
+\item Aber: keine vorgelagerte Trennung der Datengrundlage nach weiteren Einzelgefahren
+\item Gemeinsame Kalibrierung von Schäden mehrerer Gefahren, in der Folge keine weitere Unterscheidung nach Gefahr
+\end{itemize}
+
+\subsubsection{Mögliche Ansätze/ Beispiele}
+\begin{itemize}
+\item Naturgefahren: insbesondere für die nicht-materiellen „Nebengefahren“ (Alles außer Sturm, Überschwemmung, Hagel)
+\item Manmade: Extrapolation der Großschadenverteilung soll auch Kumulschäden
+abdecken
+\end{itemize}
+
+\subsubsection{Vorteile}
+\begin{itemize}
+\item Prinzipiell für alle Arten von Gefahren möglich
+\item Transparenz / mehr Freiheitsgrade im Vorgehen
+\item Im Wesentlichen statistisches Know-How zur Modellierung notwendig
+\end{itemize}
+
+\subsubsection{Herausforderungen} \begin{itemize}
+\item Übertragbarkeit der historischen Informationen ggf. fraglich
+\item i.a. nur wenige Daten vorhanden, dadurch Kalibrierung unsicher
+\item Annahmen über Abhängigkeiten in der Regel grob
+\item Schwierigkeit einer adäquaten Extrapolation
+\end{itemize}
+
+\subsubsection{Implizite ggü. expliziter Modellierung}
+\begin{itemize}
+\item Katastrophenschäden weisen äußerst erratisches Verhalten auf, folgen in der Regel anderen Gesetzmäßigkeiten als die Basis- und Großschäden.
+\item Andererseits lässt die Datenlage keine atomisierte Modellierung jeder einzelnen Gefahr zu (Fokus der Modellierung auf wirkliche materielle Gefahren)
+\end{itemize}
+
+\subsection{Funktionsweise exposure-basierter Modelle}
+
+\subsubsection{1. Portfeuille}
+\begin{itemize}
+\item Das geophysikalisch-meteorologische Modell benötigt detaillierte Informationen
+zum versicherten Portefeuille des Versicherungsunternehmen
+\item Der Bestand wird zu einem bestimmten Zeitpunkt abgegriffen, Modell liefert also
+streng genommen nur eine Einschätzung zur Gefährdung zum Stichtag des
+Bestandsabzugs.
+\item Die Validität und Aussagekraft der Modellergebnisse hängt essentiell von der
+Qualität der verwendeten Bestandsdaten ab.
+\end{itemize}
+
+\subsubsection{2. Ereigniserzeugung}
+\begin{itemize}
+\item Das Modul umfasst einen Katalog mit historischen und synthetischen Ereignissen,
+wobei letztere Ergebnis eines Modellierungs- und Simulationsprozesses sind.
+\item Die Intensität der Ereignisse wird anhand schadenbestimmender Parameter
+beschrieben, die abhängig von der jeweiligen Naturgefahr sind (Bsp: Windgeschwindigkeit, Hagelkörner, Magnitude)
+\end{itemize}
+
+\subsubsection{3. Schadenanfälligkeitsmodul}
+\begin{itemize}
+\item Die aus dem Ereignis resultierenden Schäden an den versicherten Objekten werden mittels sogenannter Schadenfunktionen ermittelt. Schadenfunktionen beschreiben den funktionalen Zusammenhang zwischen der Intensität eines Ereignisses bzw. der zugehörigen Ausprägungen der Schadenparameter und dem mittleren Schadengrad
+\item In den GroundUp-Schäden sind noch keine versicherungsspezifischen Parameter wie
+Selbstbehalte oder Limite berücksichtigt
+\end{itemize}
+
+\subsubsection{4. Finanzmodel}
+\begin{itemize}
+\item Im Finanzmodul werden die Vertragsbedingungen und ggf. auch die Rückversicherungsstruktur (Beispiel: Summenexzedent) auf die GroundUp-Schäden angewendet, und so der beim Versicherer tatsächlich verbleibende Brutto- bzw. Nettoschaden ermittelt.
+\end{itemize}
+
+Output eines geophysikalischen Modells sind Informationen über die Schadenverteilungen (per
+Einzelereignis oder als Jahresaggregat) in komprimierter Form. Eine Event Loss Table (ELT) ist
+neben AEP- und OEP-Kurve ein weiterer möglicher Output eines geophysikalischen Modells und
+stellt eine Auflistung der im Modell generierten Ereignisse dar.
+
+Geophysikalische Modelle benötigen komplexe Software, daher werden sie nur von großen VU und Rückversicherern betrieben (Externes Modell)
+
+
+\subsubsection{Event Loss Table (ELT)}
+\begin{itemize}
+\item Unterscheidet sich nach Anbieter
+\item Anbieter AIR:
+\begin{itemize}
+\item Spalte Year: Simulationsjahr
+\item Nr: Index des Ereignisschadens im entsprechenden Simulationsjahr
+\item Spalte Company Loss: simulierten Brutto-Schaden des Unternehmens
+\item Spalte Event: Ident-Nr. aus Ereigniskatalog
+\end{itemize}
+\item Anbieter RMS:
+\begin{itemize}
+\item Spalte EVENTID: Identifizierung
+\item Spalte RATE: mittlere Anzahl der Ereigniseintritte in einem Jahr
+\item Spalte PERSPVALUE: Erwartungswert der Schadenhöhenverteilung bei Ereigniseintritt
+\item die Spalten STDDEVI und STDDEVC: Standardabweichung der Schadenhöhenverteilung bei Ereigniseintritt
+\item Spalte EXPVALUE: Obergrenze für den resultierenden Ereignisschaden
+\end{itemize}
+\item Anbieter CoreLogic:
+\begin{itemize}
+\item Spalte Event frequency: mittlere Anzahl der Ereigniseintritte in einem Jahr
+\item  Spalte Event mean gross loss: Erwartungswert der Schadenhöhenverteilung bei
+Ereigniseintritt
+\item Spalte Event sigma gross loss: Standabweichung der Schadenhöhenverteilung bei
+Ereigniseintritt
+\item Event gross limit: Obergrenze für den resultierenden Ereignisschaden
+\end{itemize}
+\end{itemize}
 
 
 
 
+\subsubsection{Vorteile}
+\begin{itemize}
+\item Basieren auf multidisziplinärem Know-How
+\item Detaillierte Modellierung von Abhängigkeiten
+\item Sowohl zur Ermittlung von Wahrscheinlichkeitsverteilungen als auch für (neue) Szenarioanalysen geeignet
+\end{itemize}
+
+\subsubsection{Herausforderungen}
+\begin{itemize}
+\item Sind nicht für alle Gefahren verfügbar
+\item Kalibrierung der Modelle (Gefährdung / Vulnerabilitäten) durch den Anbieter vorgegeben, Update der Kalibrierung mit neuer Modellversion
+\item Keine komplette Transparenz
+\item Für einige Gefahren liegen mitunter gleich mehrere externe Modelle (verschiedener Anbieter) mit unterschiedlichen Modellierungsansätzen vor. 
+\end{itemize}
+
+\subsubsection{Eigenentwicklung ggü. externem Modell}
+\begin{itemize}
+\item Aufwand und Know-How-Bedarf
+\item höhere Transparenz
+\item mehr Freiheitsgrade bei Modellierung und Kalibrierung
+\item Zuschnitt auf unternehmensindividuelle Bedürfnisse
+\end{itemize}
+
+\subsection{Modellierung von Katastrophenschäden aus Naturgefahren}
+
+\subsubsection{Beobachtungen aus der Praxis}
+\begin{itemize}
+\item Durch eingeschränkte Verfügbarkeit einer unternehmenseigenen Schadenhistorie für mathematisch-statistischer Ansätze ist die Modellierung für Sturm, Überschwemmung, Hagel und Erdbeben für deutsche Portefeuilles auf
+Basis geophysikalisch-meteorologischer Modelle am weitesten verbreitet
+\item Alle weiteren Naturgefahren i.d.R implizit modelliert
+\end{itemize}
+Teilweise werden im Zuge der Einbindung externer Modelle in das interne Unternehmensmodell noch individuelle Modifikationen am originären Modelloutput vorgenommen (Mischansätze)
+
+\subsection{Modellierung von Man-Made-Katastrophenschäden}
+
+\subsubsection{Beobachtungen aus der Praxis}
+\begin{itemize}
+\item Die unternehmensindividuelle Schadenhistorie ist i.d.R. limitiert
+\item Marktschadenverteilungen für Groß-/Kumulschäden in Man-Made exponierten Sparten sind prinzipiell vorhanden (GDV)
+\end{itemize}
+Bei den meisten Man-Made Gefahren nutzt man daher die implizite Modellierung oder szenario-basierte Modellierung. In vielen Fällen Rückgriff auf Verteilungen vom Pareto-Typ unter Verwendung, dass es für den
+Pareto-Parameter marktweit beobachtbare, spartentypische Ausprägungen gibt.
+
+\subsection{Idealtypischer Modellierungsprozess}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Modellierungsprozess.png}
+\end{figure}
+
+
+\subsection{Einbindung externer (exposure-basierter) Modelle in das interne Modell -
+Überblick}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/ExternesModell.png}
+\end{figure}
+
+\begin{itemize}
+\item Die primäre Unsicherheit bezieht sich auf die Unsicherheit über das grundsätzliche Eintreten eines Ereignisses (wird beschrieben durch RATE und PERSPVALUE),
+\item die sekundäre Unsicherheit bezieht sich auf die Unsicherheit in der Höhe des
+Schadenaufwands bei Eintritt des Ereignisses (wird beschrieben durch die Standardabweichungen)
+\end{itemize}
+
+
+\subsubsection{Actuarial Control Cycle zur Schadenmodellierung}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/ControlCycle.png}
+\end{figure}
+
+
+\chapter{Rückversicherungsmodellierung}
+
+\subsubsection{Grundidee}
+
+Rückversicherungsanalyse mit stochastischen Unternehmensmodellen:
+\begin{itemize}
+\item Abbildung von Rückversicherung mithilfe eines internen Modells von zentraler Bedeutung: Einfluss von Rückversicherung hinsichtlich Glättung von Volatilitätsspitzen und Reduktion des Risikokapitalbedarfs
+\end{itemize}
+
+\subsubsection{Einsatz interner Modelle zur RV-Analyse}
+\begin{itemize}
+\item Analyse und Gegenüberstellung der Verteilungen Brutto / Netto bzw. RV-Recoveries ermöglicht genaue Abschätzung von Kosten und Nutzen von RV-Verträgen
+\item hilft bei Identifikation von Deckungslücken und der Frage nach der Effizienz der RV
+\item  Ableitung unzähliger Kennzahlen möglich (RV-Preis vs. durchschnittliche Recoveries, RV-Preis vs. Risikokapitalersparnis, Gewinnwahrscheinlichkeiten…)
+\item Rückversicherungsanalyse mit internen Modellen kann Verhandlungsposition gegenüber Rückversicherern stärken
+\item Vor Solvency II für viele VU Motivation zum Aufbau interner Modelle, heute oft zum
+Nachweis des „Use Test“ (Verwendungstests) unter Solvency II verwendet
+\end{itemize}
+
+\chapter{Stochastische Modellierung des Reserverisikos und Erzeugung von Cashflows}
+
+\section{Modellierung des Reserverisikos und Generierung von Cashflows}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Einzelschaden.png}
+\end{figure}
+Aktuarielle Reservierungsverfahren liefern mit dem Best-Estimate für die Schadenrückstellungen eine Punktschätzung („wahrscheinlichkeitsgewichtetes Mittel“) und damit lediglich ein mögliches Auskommen der Reserve
+
+\begin{itemize}
+\item Das Reserverisiko beschreibt allgemein die Unsicherheit, die mit der Vorhersage der Abwicklung bereits eingetretener Schäden verbunden ist (zur genauen Definition kommen wir später).
+\item Das Reserverisiko beinhaltet zwei Aspekte:
+\begin{itemize}
+\item Höhe der Reserven (Reservierungsrisiko (= Unsicherheit über die zukünftige Auszahlungshöhe)
+\item Auszahlungszeitpunkte der Zahlungen („Abwicklungsmuster“) (Auszahlungsrisiko (= Unsicherheit über die konkreten Auszahlungszeitpunkte))
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Stochastische Modelle für die Schadenabwicklung}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Dreieck.png}
+\end{figure}
+
+\subsubsection{Ausgangsituation/ Notation}
+\begin{itemize}
+\item $S_{i,k}$ bezeichnet die (nominalen) inkrementellen Zahlungen für das Anfalljahr $1 \leq i \leq n$ im Abwicklungsjahr $1 \leq k \leq \omega$ (mit $\omega$ Endabwicklungszeitpunkt)
+\item $C_{i,k} = \sum^k_{j=1} S_{i,j}$ repräsentiert die kumulierten Zahlungen eines Anfalljahres nach $k$ Abwicklungsjahren
+\item Das Schadendreieck $D_n:= \{S_{i,k} \}_{i+k\leq n+1}$ enthält die bis $T=n$ bereits geleisteten Schadenzahlungen
+\item Die Zahlungen $\{S_{i,k}\} _{1\leq i \leq n, n-i+1 < k \leq \omega}$ sind zum Zeitpunkt $T=n$ noch unbekannt und damit ebenfalls:
+\begin{itemize}
+\item die nominale Bedarfsreserve $R^{(n)}_i := \sum^\omega_{k=n-i+2}S_{i,k}$ eines einzelnen Anfallsjahres $1\leq i \leq n$
+\item die nominale Bedarfsreserve $R^{(n)} := \sum^n_{i=1} R_i^{(n)}$ aller Anfalljahre
+\item der nominale Endschadenaufwand ("Ultimate") $U_i:=C_{i,\omega}$ eines Anfalljahres $1\leq i \leq n$
+\end{itemize}
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Schätzprozess.png}
+\end{figure}
+
+Zur Messung des Reserverisikos ist unabhängig vom konkreten Risikohorizont die Formulierung eines geeigneten stochastischen Modells für die Schadenabwicklung notwendig, welches konsistent zum  verwendeten Reservierungsverfahren $\mathcal{T}_n$ für die Best-Estimate Schätzung ist.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Modelle.png}
+\end{figure}
+
+
+\subsubsection{Definition ultimatives Reserverisiko}
+Als ultimatives Reserverisiko wird das Risiko bezeichnet, dass die Best-Estimate
+Rückstellungen für angefallene, aber noch nicht abgewickelte Versicherungsfälle nicht
+ausreichen, um allen zukünftigen Schadenzahlungen bis zur vollständigen Abwicklung
+nachzukommen.
+
+Maßgebliche Größen für die Messung sind die Abweichungen der zukünftigen Zahlungen von den zugehörigen Reserveschätzern:
+\begin{itemize}
+\item Einzelnes Anfalljahr $1 \leq i \leq n$: $R^{(n)}_i - \hat{R}^{(n)}_i= U_i - \hat{U}^{(n)}_i$
+\item Gesamtportfolio, d.h. alle Anfalljahre $\{1,...,n\}$: $R^{(n)} - \hat{R}^{(n)} = \sum^n_{i=1} (R^{(n)}_i - \hat{R}^{(n)}_i)$
+\end{itemize}
+
+
+\subsection{Ansätze zur Quantifizierung des ultimativen Reserverisikos}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Schaetzer.png}
+\end{figure}
+
+Wahl der Reserveverteilung für das ultimative Reserverisiko:
+\begin{itemize}
+\item lediglich zweiparametrige Verteilungen 
+\item  Die Lognormal- und Gammaverteilung zeichnen sich durch ihre Rechtsschiefe aus, die Lognormalverteilung hat dabei in der Regel den schwereren Tail.
+\item Einschränkungen der Normalverteilung: symmetrisch, kein ausschließlich positiver
+Wertebereich
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Verteilungsparameter.png}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Risikokapital.png}
+\end{figure}
+
+\vspace{1cm}
+Mögliches Vorgehen:
+\begin{itemize}
+\item Simuliere anhand der mittleren quadratischen Vorhersagefehler (gegeben die Dreieckshistorie $D_n$) die Bedarfsreserven pro einzelnem Anfalljahr aus einer parametrischen Wahrscheinlichkeitsverteilung
+\item Da die Vorhersagen der Reserven für die einzelnen Anfalljahre weder unabhängig (gemeinsamer
+Schätzprozess) noch vollständig positiv (Unabhängigkeit im Prozess) korreliert sind, sind Einzelreserven geeignet in Abhängigkeit zu bringen, damit der Vorhersagefehler der Gesamtreserve nach Aggregation der Einzelreserven reproduziert wird.
+\item Aus den analytischen Formeln zu den Vorhersagefehlern lassen sich zusätzlich lineare Korrelationen ermitteln, die zur Kalibrierung der Abhängigkeiten genutzt werden können.
+\end{itemize} 
+
+In den wenigsten Fällen: Verwendung von Basisverfahren für Best-Estimate-Schätzungen \\
+Stattdessen: Variationen des Basisverfahrens (Ausschluss einzelner Übergangsfaktoren, Beschränkung der Übergangfaktoren, Glättung der Chain-Ladder-Faktoren)
+
+\subsubsection{Wie ist bei der Risikobewertung mit Modifikationen der
+Basisverfahren umzugehen?}
+\begin{itemize}
+\item Grundsätzlich: Modifikationen können schwankungserhöhend, aber auch
+schwankungsmindernd wirken
+\item Pragmatischer Ansatz: Übertrage den theoretischen Vorhersagefehler
+unter dem Basisverfahren bzw. dem zugehörigen stochastischen
+Abwicklungsmodell (sofern analytisch ermittelbar) auf die mit dem Verfahren $\mathcal{T}_n$ tatsächlich geschätzte Best-Estimate-Reserve
+\item Zur Sicherstellung größtmöglicher Konsistenz zwischen Best-EstimateBewertung und Risikomessung sollte das Basisverfahren hinreichend nahe
+an $\mathcal{T}_n$ liegen
+\end{itemize}
+
+Bei Schwierigkeiten: Bootstrapping-Verfahren
+
+
+\chapter{Überleitung in die einjährige Risikosicht in der Versicherungstechnik}
+
+\subsection{Allgemeine Überlegungen zum einjährigen Risikohorizont}
+Das SCR (Solvenzkapitalanforderung) entspricht dem Value-at-Risk der Veränderung der
+Basiseigenmittel eines Versicherungs- oder Rückversicherungsunternehmens zu einem
+Konfidenzniveau von 99,5 % über den Zeitraum eines Jahres.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/SCR.png}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Risikohorizont.png}
+\end{figure}
 
 
 
+Zu Beginn des Kalenderjahres (erstes Rechteck):
+\begin{itemize}
+\item liegt eine ökonomische Bewertung der vt. Verbindlichkeiten zum Stichtag $T=n$ vor
+\item Bester Schätzwert ist brutto (ohne Abzug von RV-Verträgen)
+\item Einforderbare Beträge werden gesondert berechnet
+\end{itemize}
 
 
 
+Während des Kalenderjahres (Pfeil):
+\begin{itemize}
+\item werden Schäden aus Altjahren gemeldet, bezahlt, Schadenrückstellungen aufgelöst und neu gebildet
+\item fallen Kosten für den Versicherungsbetrieb und Schadenregulierung an
+\item Angefallene Schäden im Kalenderjahr gemeldet,  bezahlt, Schadenrückstellungen  gebildet
+\end{itemize}
 
 
+Am Ende des Kalenderjahres (Zweites Rechteck)
+\begin{itemize}
+\item erfolgt ökonomische Neubewertung der vt. Verbindlichkeiten zum Stichtag ($T=n+1$) unter der Berücksichtigung der Entwicklungen
+\end{itemize}
+
+\begin{itemize}
+\item In der einjährigen Risikosicht werden die Auswirkungen von Eintritt und Abwicklung der Schäden auf die ökonomischen Eigenmittel innerhalb des auf den Bewertungsstichtag folgenden Kalenderjahres betrachtet.
+\item Die Trennung zwischen Prämien- und Reserverisiko erfolgt anhand des Zeitpunkts des Schadenanfalls (beim Reserverisiko werden ausschließlich die bis zum Bewertungsstichtag bereits angefallenen Schäden betrachtet, beim Prämienrisiko die nach dem Bewertungsstichtag anfallenden Schäden).
+\end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Kalendersicht2.png}
+\end{figure}
 
 
+Vt. Ergebnis des nächsten Kalenderjahres setzt sich zusammen aus:
+\begin{itemize}
+\item Zukünftige Gewinne/Verluste aus der Abwicklung der Altschäden (aus
+Anfalljahren $1, …, n$) während des nächsten Kalenderjahres
+\item Zukünftige Gewinne/Verlusten aus Anfall und Abwicklung von Neuschäden aus
+zukünftig verdientem Geschäft (Anfalljahr $n+1$) während des nächsten
+Kalenderjahres
+\end{itemize}
 
 
+\subsection{Der einjährige Risikohorizont im Reserverisiko}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/Schaetzer2.png}
+\end{figure}
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width= \textwidth]{Bilder/AbwErg.png}
+\end{figure}
 
+\subsubsection{Definition}
+Als einjähriges (nominales) Reserverisiko wird das Risiko eines (nominalen)
+Definition ökonomischen Abwicklungsverlustes über den Zeitraum von einem Kalenderjahr bezeichnet.
 
+\subsubsection{Ziel}
+Modellierung der kompletten Vorhersageverteilung des einjährigen nominalen ökonomischen Ziel Abwicklungsergebnisses $\hat{CDR}^{(n\rightarrow n+1)}$ gegeben die Dreieckshistorie $D_n$.
 
-
-
-
-
+\subsection{Direkte Anpassung der CDR-Verteilung gemäß Analytik}
 
 
 
