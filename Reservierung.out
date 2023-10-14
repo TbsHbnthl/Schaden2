@@ -1,0 +1,47 @@
+\BOOKMARK [0][-]{chapter.1}{Reservierungsprozess und seine Schnittstellen}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Aktuar in der Schadenversicherung}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Kernaufgaben und Funktionen}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Zielsetzungen Reservebewertung}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Zweck und Aufbau des Reserveberichts}{section.1.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Versicherungstechnische R\374ckstellungen in der Rechnungslegung}{}% 6
+\BOOKMARK [1][-]{section.2.1}{IFRS 17, HGB, SII im Vergleich}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{Versicherungsvertr\344ge}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{Kosten als Teil der vers.techn. R\374ckstellungen}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.3}{Datenqualit\344t}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Bewertungsmodell unter IFRS 17}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.3}{Bewertungsmodell unter HGB}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.3.1}{Schwankungsr\374ckstellungen unter HGB}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Bewertungsmodell unter SII}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.5}{Schadenr\374ckstellungen unter SII}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.6}{Pr\344mienr\374ckstellungen unter SII}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.7}{R\374ckversicherung unter SII}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.8}{Risikomarge unter SII}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Grundlagen der aktuariellen Schadenreservebewertung}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Grundlagen und Bezeichnungen}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{Abwicklungsdreieck bzw. -rechteck}{section.3.1}% 21
+\BOOKMARK [1][-]{section.3.2}{Segmentierung}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{Sich \344ndernde Rahmenbedingungen - Inflation}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.1}{externe Rahnenbedingungen}{section.3.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Raten\344nderungen, Pr\344mienzyklen und Reservezyklen}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.5}{Die Behandlung von Ausrei\337ern, Gro\337- und Kumulsch\344den}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.6}{Abwicklungsmuster und Methoden der Reservebewertung}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.7}{Behandlung Nachlauf und Gl\344ttung}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.7.1}{Sch\344tzung der Tailfaktoren}{section.3.7}% 29
+\BOOKMARK [0][-]{chapter.4}{Stochastische Modelle der aktuariellen Schadenreservebewertung}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Grundlagen stochastischer Modelle}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.1.1}{Sch\344tz-, Zufalls-, und Prognosefehler}{section.4.1}% 32
+\BOOKMARK [1][-]{section.4.2}{Das Incremental-Loss-Ratio-Modell}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.3}{Das CL-Modell}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.4}{\334berpr\374fung der Modellannahmen und Modellauswahl}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.4.1}{Graphische Darstellung}{section.4.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.2}{Residuenanalyse}{section.4.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.3}{Graphische Residuenanalyse}{section.4.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.4}{Auswahl eines Modells}{section.4.4}% 39
+\BOOKMARK [1][-]{section.4.5}{Aggregation der Reserven mehrerer Segmente}{chapter.4}% 40
+\BOOKMARK [2][-]{subsection.4.5.1}{Gesamtreserve}{section.4.5}% 41
+\BOOKMARK [2][-]{subsection.4.5.2}{Korrelationsmodell zur Aggregation von Reserven nach Braun 2004}{section.4.5}% 42
+\BOOKMARK [2][-]{subsection.4.5.3}{Bemerkungen zum Korrelationsmodell}{section.4.5}% 43
+\BOOKMARK [1][-]{section.4.6}{Bornhuetter/Ferguson-Modell}{chapter.4}% 44
+\BOOKMARK [2][-]{subsection.4.6.1}{Das Verfahren}{section.4.6}% 45
+\BOOKMARK [2][-]{subsection.4.6.2}{Eigenschaften B/F-Methode}{section.4.6}% 46
+\BOOKMARK [2][-]{subsection.4.6.3}{Modell Annahmen nach Mack}{section.4.6}% 47

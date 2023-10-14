@@ -1,0 +1,59 @@
+\babel@toc {ngerman}{}
+\contentsline {chapter}{\numberline {1}Reservierungsprozess und seine Schnittstellen}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Aktuar in der Schadenversicherung}{2}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Kernaufgaben und Funktionen}{2}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Zielsetzungen Reservebewertung}{2}{subsection.1.1.2}%
+\contentsline {subsubsection}{Reservierungsprozess}{3}{subsubsection*.2}%
+\contentsline {subsubsection}{Allgemeine Aspekte}{3}{subsubsection*.4}%
+\contentsline {subsubsection}{Daten}{3}{subsubsection*.5}%
+\contentsline {subsubsection}{Reserveberechnung}{4}{subsubsection*.6}%
+\contentsline {subsubsection}{Unabh\"angige Validierung}{4}{subsubsection*.7}%
+\contentsline {subsubsection}{Prozessdokumentation}{4}{subsubsection*.8}%
+\contentsline {subsection}{\numberline {1.1.3}Zweck und Aufbau des Reserveberichts}{5}{subsection.1.1.3}%
+\contentsline {chapter}{\numberline {2}Versicherungstechnische R\"uckstellungen in der Rechnungslegung}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}IFRS 17, HGB, SII im Vergleich}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Versicherungsvertr\"age}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Kosten als Teil der vers.techn. R\"uckstellungen}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Datenqualit\"at}{7}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Bewertungsmodell unter IFRS 17}{7}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Bewertungsmodell unter HGB}{7}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Schwankungsr\"uckstellungen unter HGB}{8}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Bewertungsmodell unter SII}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Schadenr\"uckstellungen unter SII}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Pr\"amienr\"uckstellungen unter SII}{9}{section.2.6}%
+\contentsline {subsubsection}{Ansatz von Versicherungsvertr\"agen unter SII}{10}{subsubsection*.9}%
+\contentsline {subsubsection}{Vertragsgrenzen unter SII}{10}{subsubsection*.10}%
+\contentsline {subsubsection}{Vereinfachtes Berechnungsverfahren zur Sch\"atzung der Pr\"amienr\"uckstellung}{10}{subsubsection*.11}%
+\contentsline {section}{\numberline {2.7}R\"uckversicherung unter SII}{10}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Risikomarge unter SII}{11}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Grundlagen der aktuariellen Schadenreservebewertung}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Grundlagen und Bezeichnungen}{12}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Abwicklungsdreieck bzw. -rechteck}{12}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Segmentierung}{13}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Sich \"andernde Rahmenbedingungen - Inflation}{13}{section.3.3}%
+\contentsline {subsubsection}{interne Rahmenbedingungen}{13}{subsubsection*.13}%
+\contentsline {subsection}{\numberline {3.3.1}externe Rahnenbedingungen}{14}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Raten\"anderungen, Pr\"amienzyklen und Reservezyklen}{14}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Die Behandlung von Ausrei{\ss }ern, Gro{\ss }- und Kumulsch\"aden}{15}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Abwicklungsmuster und Methoden der Reservebewertung}{16}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Behandlung Nachlauf und Gl\"attung}{17}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Sch\"atzung der Tailfaktoren}{18}{subsection.3.7.1}%
+\contentsline {subsubsection}{Praxisaspekte bei der Sch\"atzung von Tailfaktoren}{18}{subsubsection*.19}%
+\contentsline {chapter}{\numberline {4}Stochastische Modelle der aktuariellen Schadenreservebewertung}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Grundlagen stochastischer Modelle}{19}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Sch\"atz-, Zufalls-, und Prognosefehler}{19}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Das Incremental-Loss-Ratio-Modell}{20}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Das CL-Modell}{20}{section.4.3}%
+\contentsline {section}{\numberline {4.4}\"Uberpr\"ufung der Modellannahmen und Modellauswahl}{22}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Graphische Darstellung}{22}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Residuenanalyse}{23}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Graphische Residuenanalyse}{23}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Auswahl eines Modells}{24}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Aggregation der Reserven mehrerer Segmente}{24}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Gesamtreserve}{25}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Korrelationsmodell zur Aggregation von Reserven nach Braun 2004}{25}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Bemerkungen zum Korrelationsmodell}{26}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}Bornhuetter/Ferguson-Modell}{27}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Das Verfahren}{27}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Eigenschaften B/F-Methode}{27}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Modell Annahmen nach Mack}{28}{subsection.4.6.3}%
