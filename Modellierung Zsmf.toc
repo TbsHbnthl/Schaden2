@@ -1,70 +1,70 @@
 \babel@toc {ngerman}{}
-\contentsline {chapter}{\numberline {1}Grundlagen interner Modelle im Kompositbereich}{2}{chapter.1}%
-\contentsline {subsubsection}{Definition eines Unternehmensmodell}{2}{subsubsection*.2}%
-\contentsline {subsubsection}{Standardformel}{2}{subsubsection*.3}%
-\contentsline {subsubsection}{Modellierung mit einem stochastischen Unternehmensmodell}{2}{subsubsection*.4}%
-\contentsline {subsubsection}{Definitionen}{3}{subsubsection*.6}%
-\contentsline {subsubsection}{Struktur eines DFA-Modells (Dynamische Finanzanalyse in S/U}{3}{subsubsection*.8}%
-\contentsline {chapter}{\numberline {2}Bruttomodellierung (inkl. Katastrophenschäden)}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Grundlagen}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Zielgrößen und Gestalt der Ergebnisse}{5}{subsection.2.1.1}%
-\contentsline {subsubsection}{Kalenderjahressicht}{5}{subsubsection*.10}%
-\contentsline {subsubsection}{Ultimatesicht}{6}{subsubsection*.12}%
-\contentsline {subsection}{\numberline {2.1.2}Definition des Prämienrisikos}{6}{subsection.2.1.2}%
-\contentsline {subsubsection}{Definition}{7}{subsubsection*.14}%
-\contentsline {subsubsection}{Frage: Sollte man das ultimative Prämienrisiko anhand des Anfalljahresergebnisses vor oder nach Zentrierung, d.h. vor oder nach Abzug des Mittelwerts, messen?}{7}{subsubsection*.15}%
-\contentsline {subsection}{\numberline {2.1.3}Schadenmodellierung}{8}{subsection.2.1.3}%
-\contentsline {subsubsection}{Basisschäden}{8}{subsubsection*.16}%
-\contentsline {subsubsection}{Großschäden}{8}{subsubsection*.17}%
-\contentsline {subsubsection}{Katastrophenschäden}{8}{subsubsection*.18}%
-\contentsline {subsection}{\numberline {2.1.4}Schadenmodellierung (excl. CAT)}{9}{subsection.2.1.4}%
-\contentsline {subsubsection}{Kalibrierungsprozess}{9}{subsubsection*.20}%
-\contentsline {section}{\numberline {2.2}Modellierung von Katastrophenschäden}{10}{section.2.2}%
-\contentsline {subsubsection}{Definition}{10}{subsubsection*.21}%
-\contentsline {subsubsection}{Analyse und Bewertung des Katastrophenpotentials der versicherten Gefahren}{10}{subsubsection*.22}%
-\contentsline {subsubsection}{Analyse und Bewertung der Datenverfügbarkeit /-qualität}{10}{subsubsection*.23}%
-\contentsline {subsection}{\numberline {2.2.1}Charakterisierung von Katastrophenschadenverteilungen}{11}{subsection.2.2.1}%
-\contentsline {subsubsection}{Definition}{11}{subsubsection*.24}%
-\contentsline {subsection}{\numberline {2.2.2}Modellierungsansätze für Katastrophenschäden}{12}{subsection.2.2.2}%
-\contentsline {subsubsection}{mathematisch-statistische (aktuarielle) Modellierung}{13}{subsubsection*.27}%
-\contentsline {subsection}{\numberline {2.2.3}Explizite Modellierung gemäß mathematisch-statistischer Ansätze}{13}{subsection.2.2.3}%
-\contentsline {subsubsection}{Allgemeine Methodik/ Vorgehen}{13}{subsubsection*.28}%
-\contentsline {subsubsection}{Mögliche Ansätze/ Beispiele}{13}{subsubsection*.29}%
-\contentsline {subsection}{\numberline {2.2.4}Implizite Modellierung gemäß mathematisch-statistischer Ansätze}{14}{subsection.2.2.4}%
-\contentsline {subsubsection}{Allgemeines Vorgehen}{14}{subsubsection*.30}%
-\contentsline {subsubsection}{Mögliche Ansätze/ Beispiele}{14}{subsubsection*.31}%
-\contentsline {subsubsection}{Vorteile}{14}{subsubsection*.32}%
-\contentsline {subsubsection}{Herausforderungen}{14}{subsubsection*.33}%
-\contentsline {subsubsection}{Implizite ggü. expliziter Modellierung}{14}{subsubsection*.34}%
-\contentsline {subsection}{\numberline {2.2.5}Funktionsweise exposure-basierter Modelle}{15}{subsection.2.2.5}%
-\contentsline {subsubsection}{1. Portfeuille}{15}{subsubsection*.35}%
-\contentsline {subsubsection}{2. Ereigniserzeugung}{15}{subsubsection*.36}%
-\contentsline {subsubsection}{3. Schadenanfälligkeitsmodul}{15}{subsubsection*.37}%
-\contentsline {subsubsection}{4. Finanzmodel}{15}{subsubsection*.38}%
-\contentsline {subsubsection}{Event Loss Table (ELT)}{16}{subsubsection*.39}%
-\contentsline {subsubsection}{Vorteile}{16}{subsubsection*.40}%
-\contentsline {subsubsection}{Herausforderungen}{17}{subsubsection*.41}%
-\contentsline {subsubsection}{Eigenentwicklung ggü. externem Modell}{17}{subsubsection*.42}%
-\contentsline {subsection}{\numberline {2.2.6}Modellierung von Katastrophenschäden aus Naturgefahren}{17}{subsection.2.2.6}%
-\contentsline {subsubsection}{Beobachtungen aus der Praxis}{17}{subsubsection*.43}%
-\contentsline {subsection}{\numberline {2.2.7}Modellierung von Man-Made-Katastrophenschäden}{17}{subsection.2.2.7}%
-\contentsline {subsubsection}{Beobachtungen aus der Praxis}{17}{subsubsection*.44}%
-\contentsline {subsection}{\numberline {2.2.8}Idealtypischer Modellierungsprozess}{18}{subsection.2.2.8}%
-\contentsline {subsection}{\numberline {2.2.9}Einbindung externer (exposure-basierter) Modelle in das interne Modell - Überblick}{18}{subsection.2.2.9}%
-\contentsline {subsubsection}{Actuarial Control Cycle zur Schadenmodellierung}{18}{subsubsection*.47}%
-\contentsline {chapter}{\numberline {3}Rückversicherungsmodellierung}{20}{chapter.3}%
-\contentsline {subsubsection}{Grundidee}{20}{subsubsection*.49}%
-\contentsline {subsubsection}{Einsatz interner Modelle zur RV-Analyse}{20}{subsubsection*.50}%
-\contentsline {chapter}{\numberline {4}Stochastische Modellierung des Reserverisikos und Erzeugung von Cashflows}{21}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Modellierung des Reserverisikos und Generierung von Cashflows}{21}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Stochastische Modelle für die Schadenabwicklung}{22}{subsection.4.1.1}%
-\contentsline {subsubsection}{Ausgangsituation/ Notation}{22}{subsubsection*.53}%
-\contentsline {subsubsection}{Definition ultimatives Reserverisiko}{23}{subsubsection*.56}%
-\contentsline {subsection}{\numberline {4.1.2}Ansätze zur Quantifizierung des ultimativen Reserverisikos}{23}{subsection.4.1.2}%
-\contentsline {subsubsection}{Wie ist bei der Risikobewertung mit Modifikationen der Basisverfahren umzugehen?}{25}{subsubsection*.60}%
-\contentsline {chapter}{\numberline {5}Überleitung in die einjährige Risikosicht in der Versicherungstechnik}{26}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Allgemeine Überlegungen zum einjährigen Risikohorizont}{26}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Der einjährige Risikohorizont im Reserverisiko}{28}{subsection.5.0.2}%
-\contentsline {subsubsection}{Definition}{28}{subsubsection*.66}%
-\contentsline {subsubsection}{Ziel}{28}{subsubsection*.67}%
-\contentsline {subsection}{\numberline {5.0.3}Direkte Anpassung der CDR-Verteilung gemäß Analytik}{29}{subsection.5.0.3}%
+\contentsline {chapter}{\numberline {1}Grundlagen interner Modelle im Kompositbereich}{3}{chapter.1}%
+\contentsline {subsubsection}{Definition eines Unternehmensmodell}{3}{subsubsection*.2}%
+\contentsline {subsubsection}{Standardformel}{3}{subsubsection*.3}%
+\contentsline {subsubsection}{Modellierung mit einem stochastischen Unternehmensmodell}{3}{subsubsection*.4}%
+\contentsline {subsubsection}{Definitionen}{4}{subsubsection*.6}%
+\contentsline {subsubsection}{Struktur eines DFA-Modells (Dynamische Finanzanalyse in S/U}{4}{subsubsection*.8}%
+\contentsline {chapter}{\numberline {2}Bruttomodellierung (inkl. Katastrophenschäden)}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Grundlagen}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Zielgrößen und Gestalt der Ergebnisse}{6}{subsection.2.1.1}%
+\contentsline {subsubsection}{Kalenderjahressicht}{6}{subsubsection*.10}%
+\contentsline {subsubsection}{Ultimatesicht}{7}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {2.1.2}Definition des Prämienrisikos}{7}{subsection.2.1.2}%
+\contentsline {subsubsection}{Definition}{8}{subsubsection*.14}%
+\contentsline {subsubsection}{Frage: Sollte man das ultimative Prämienrisiko anhand des Anfalljahresergebnisses vor oder nach Zentrierung, d.h. vor oder nach Abzug des Mittelwerts, messen?}{8}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {2.1.3}Schadenmodellierung}{9}{subsection.2.1.3}%
+\contentsline {subsubsection}{Basisschäden}{9}{subsubsection*.16}%
+\contentsline {subsubsection}{Großschäden}{9}{subsubsection*.17}%
+\contentsline {subsubsection}{Katastrophenschäden}{9}{subsubsection*.18}%
+\contentsline {subsection}{\numberline {2.1.4}Schadenmodellierung (excl. CAT)}{10}{subsection.2.1.4}%
+\contentsline {subsubsection}{Kalibrierungsprozess}{10}{subsubsection*.20}%
+\contentsline {section}{\numberline {2.2}Modellierung von Katastrophenschäden}{11}{section.2.2}%
+\contentsline {subsubsection}{Definition}{11}{subsubsection*.21}%
+\contentsline {subsubsection}{Analyse und Bewertung des Katastrophenpotentials der versicherten Gefahren}{11}{subsubsection*.22}%
+\contentsline {subsubsection}{Analyse und Bewertung der Datenverfügbarkeit /-qualität}{11}{subsubsection*.23}%
+\contentsline {subsection}{\numberline {2.2.1}Charakterisierung von Katastrophenschadenverteilungen}{12}{subsection.2.2.1}%
+\contentsline {subsubsection}{Definition}{12}{subsubsection*.24}%
+\contentsline {subsection}{\numberline {2.2.2}Modellierungsansätze für Katastrophenschäden}{13}{subsection.2.2.2}%
+\contentsline {subsubsection}{mathematisch-statistische (aktuarielle) Modellierung}{14}{subsubsection*.27}%
+\contentsline {subsection}{\numberline {2.2.3}Explizite Modellierung gemäß mathematisch-statistischer Ansätze}{14}{subsection.2.2.3}%
+\contentsline {subsubsection}{Allgemeine Methodik/ Vorgehen}{14}{subsubsection*.28}%
+\contentsline {subsubsection}{Mögliche Ansätze/ Beispiele}{14}{subsubsection*.29}%
+\contentsline {subsection}{\numberline {2.2.4}Implizite Modellierung gemäß mathematisch-statistischer Ansätze}{15}{subsection.2.2.4}%
+\contentsline {subsubsection}{Allgemeines Vorgehen}{15}{subsubsection*.30}%
+\contentsline {subsubsection}{Mögliche Ansätze/ Beispiele}{15}{subsubsection*.31}%
+\contentsline {subsubsection}{Vorteile}{15}{subsubsection*.32}%
+\contentsline {subsubsection}{Herausforderungen}{15}{subsubsection*.33}%
+\contentsline {subsubsection}{Implizite ggü. expliziter Modellierung}{15}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {2.2.5}Funktionsweise exposure-basierter Modelle}{16}{subsection.2.2.5}%
+\contentsline {subsubsection}{1. Portfeuille}{16}{subsubsection*.35}%
+\contentsline {subsubsection}{2. Ereigniserzeugung}{16}{subsubsection*.36}%
+\contentsline {subsubsection}{3. Schadenanfälligkeitsmodul}{16}{subsubsection*.37}%
+\contentsline {subsubsection}{4. Finanzmodel}{16}{subsubsection*.38}%
+\contentsline {subsubsection}{Event Loss Table (ELT)}{17}{subsubsection*.39}%
+\contentsline {subsubsection}{Vorteile}{17}{subsubsection*.40}%
+\contentsline {subsubsection}{Herausforderungen}{18}{subsubsection*.41}%
+\contentsline {subsubsection}{Eigenentwicklung ggü. externem Modell}{18}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {2.2.6}Modellierung von Katastrophenschäden aus Naturgefahren}{18}{subsection.2.2.6}%
+\contentsline {subsubsection}{Beobachtungen aus der Praxis}{18}{subsubsection*.43}%
+\contentsline {subsection}{\numberline {2.2.7}Modellierung von Man-Made-Katastrophenschäden}{18}{subsection.2.2.7}%
+\contentsline {subsubsection}{Beobachtungen aus der Praxis}{18}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {2.2.8}Idealtypischer Modellierungsprozess}{19}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}Einbindung externer (exposure-basierter) Modelle in das interne Modell - Überblick}{20}{subsection.2.2.9}%
+\contentsline {subsubsection}{Actuarial Control Cycle zur Schadenmodellierung}{21}{subsubsection*.49}%
+\contentsline {chapter}{\numberline {3}Rückversicherungsmodellierung}{22}{chapter.3}%
+\contentsline {subsubsection}{Grundidee}{22}{subsubsection*.51}%
+\contentsline {subsubsection}{Einsatz interner Modelle zur RV-Analyse}{22}{subsubsection*.52}%
+\contentsline {chapter}{\numberline {4}Stochastische Modellierung des Reserverisikos und Erzeugung von Cashflows}{23}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Modellierung des Reserverisikos und Generierung von Cashflows}{23}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Stochastische Modelle für die Schadenabwicklung}{24}{subsection.4.1.1}%
+\contentsline {subsubsection}{Ausgangsituation/ Notation}{24}{subsubsection*.55}%
+\contentsline {subsubsection}{Definition ultimatives Reserverisiko}{25}{subsubsection*.58}%
+\contentsline {subsection}{\numberline {4.1.2}Ansätze zur Quantifizierung des ultimativen Reserverisikos}{25}{subsection.4.1.2}%
+\contentsline {subsubsection}{Wie ist bei der Risikobewertung mit Modifikationen der Basisverfahren umzugehen?}{27}{subsubsection*.62}%
+\contentsline {chapter}{\numberline {5}Überleitung in die einjährige Risikosicht in der Versicherungstechnik}{28}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Allgemeine Überlegungen zum einjährigen Risikohorizont}{28}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Der einjährige Risikohorizont im Reserverisiko}{30}{subsection.5.0.2}%
+\contentsline {subsubsection}{Definition}{30}{subsubsection*.68}%
+\contentsline {subsubsection}{Ziel}{30}{subsubsection*.69}%
+\contentsline {subsection}{\numberline {5.0.3}Direkte Anpassung der CDR-Verteilung gemäß Analytik}{31}{subsection.5.0.3}%
